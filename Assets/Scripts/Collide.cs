@@ -116,12 +116,12 @@ public class Collide : MonoBehaviour
         }
         else
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = ballVelocity;
+            gameObject.GetComponent<Rigidbody2D>().velocity = ballVelocity * Time.deltaTime * 75;
         }
 
         if (pongAgentR != null && notTraining)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = ballVelocity * Time.deltaTime * 200;
+            gameObject.GetComponent<Rigidbody2D>().velocity = ballVelocity * Time.deltaTime * 75;
         }
 
         posR.y = Mathf.Clamp(transform.position.y, lockTransforms[0].position.y, lockTransforms[1].position.y);
@@ -261,7 +261,7 @@ public class Collide : MonoBehaviour
             }
 
             DirectionSwitchX();
-            ballVelocity.x = ballSpeedx;
+            ballVelocity.x = ballSpeedx * Time.deltaTime * 30;
         }
 
         if (collision.gameObject.tag == "AgentL")
@@ -272,7 +272,7 @@ public class Collide : MonoBehaviour
             }
 
             DirectionSwitchX();
-            ballVelocity.x = ballSpeedx;
+            ballVelocity.x = ballSpeedx * Time.deltaTime * 30;
         }
 
         if (collision.gameObject.tag == "AgentR")
@@ -283,7 +283,7 @@ public class Collide : MonoBehaviour
             }
 
             DirectionSwitchX();
-            ballVelocity.x = ballSpeedx;
+            ballVelocity.x = ballSpeedx * Time.deltaTime * 30;
         }
 
         if (collision.gameObject.tag == "BouncerL")
@@ -294,7 +294,7 @@ public class Collide : MonoBehaviour
             }
 
             DirectionSwitchX();
-            ballVelocity.x = ballSpeedx;
+            ballVelocity.x = ballSpeedx * Time.deltaTime * 30;
         }
 
         IEnumerator WaitAfterGoalL()
@@ -317,8 +317,8 @@ public class Collide : MonoBehaviour
                     timer.gameObject.SetActive(false);
                 }
 
-                ballVelocity.x += ballSpeedx;
-                ballVelocity.y += ballSpeedy;
+                ballVelocity.x += ballSpeedx * Time.deltaTime;
+                ballVelocity.y += ballSpeedy * Time.deltaTime;
 
                 transform.localPosition = ballStart;
             }

@@ -8,6 +8,6 @@ public class AIWinRate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<TextMeshProUGUI>().text = ($"AI Winrate: {(PlayerPrefs.GetFloat("AIWinsL") / PlayerPrefs.GetFloat("AiGamesPlayed") * 100)}" + "%");
+        GetComponent<TextMeshProUGUI>().text = ($"AI Winrate: {(PlayerPrefs.GetFloat("AIWinsL") / PlayerPrefs.GetFloat("AiGamesPlayed") * 100).ToString("F2")}" + "%");
     }
 }
