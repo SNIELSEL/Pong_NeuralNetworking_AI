@@ -677,7 +677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AI Pong
+  m_text: Pong
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d948b65f33e11f248bfe3929330d6c7e, type: 2}
   m_sharedMaterial: {fileID: 7500352365005522830, guid: d948b65f33e11f248bfe3929330d6c7e,
@@ -2772,7 +2772,7 @@ RectTransform:
   m_GameObject: {fileID: 1229039487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6, y: 3.6, z: 3.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 134626893}
@@ -2802,7 +2802,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game made by Niels Haverkotte
+  m_text: original pong made by Atari, Inc. and Allan Alcorn \n                                                                  
+    Reinforced AI made by Niels Haverkotte
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d948b65f33e11f248bfe3929330d6c7e, type: 2}
   m_sharedMaterial: {fileID: 7500352365005522830, guid: d948b65f33e11f248bfe3929330d6c7e,
@@ -2830,14 +2831,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
-  m_fontSizeBase: 32.7
+  m_fontSize: 83.1
+  m_fontSizeBase: 83.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2866,7 +2867,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 221.5625, y: 0, z: 221.5625, w: 44.77417}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3973,7 +3974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1897923203
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4013,7 +4014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Deltion Arcade Editie
+  m_text: Reinforced Learning AI edition
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d948b65f33e11f248bfe3929330d6c7e, type: 2}
   m_sharedMaterial: {fileID: 7500352365005522830, guid: d948b65f33e11f248bfe3929330d6c7e,
@@ -4077,7 +4078,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -13.106201, z: 0, w: 13.106201}
+  m_margin: {x: -309.67, y: -13.106201, z: -309.67, w: 13.106201}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

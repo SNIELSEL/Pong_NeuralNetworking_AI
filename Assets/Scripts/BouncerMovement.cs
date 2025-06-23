@@ -13,20 +13,20 @@ public class BouncerMovement : MonoBehaviour
     {
         posR.x = transform.position.x;
 
-        clamps[0] = this.gameObject.transform.parent.transform.GetChild(10);
-        clamps[1] = this.gameObject.transform.parent.transform.GetChild(11);
+        clamps[0] = this.gameObject.transform.parent.transform.GetChild(5).GetChild(5);
+        clamps[1] = this.gameObject.transform.parent.transform.GetChild(5).GetChild(3);
     }
 
     public void Update()
     {
         if(gameObject.tag == "BouncerL")
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
-                gameObject.transform.position += moveSpeed * Time.deltaTime * 475;
+                transform.position += moveSpeed * Time.deltaTime * 475;
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S))
             {
                 transform.position -= moveSpeed * Time.deltaTime * 475;
             }
@@ -47,17 +47,17 @@ public class BouncerMovement : MonoBehaviour
 
         if (gameObject.tag == "BouncerR")
         {
-            if (Input.GetKey(KeyCode.Keypad6))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                gameObject.transform.position += moveSpeed * Time.deltaTime * 475;
+                transform.position += moveSpeed * Time.deltaTime * 475;
             }
 
-            if (Input.GetKey(KeyCode.Alpha0))
+            if (Input.GetKey(KeyCode.DownArrow))
             {
                 transform.position -= moveSpeed * Time.deltaTime * 475;
             }
 
-            if (transform.position.y > 1280)
+            if (transform.position.y > 1250)
             {
                 posR.y = Mathf.Clamp(transform.position.y, clamps[0].position.y, clamps[1].position.y);
                 transform.position = posR;

@@ -1,0 +1,3 @@
+conda activate mlagents
+
+mlagents-learn --run-id=Testing2 --force --time-scale=1

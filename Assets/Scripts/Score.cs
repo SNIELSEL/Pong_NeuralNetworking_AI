@@ -60,9 +60,9 @@ public class Score : MonoBehaviour
                 winL = PlayerPrefs.GetFloat("WinsR");
                 winL += 1;
                 awardedPoint = true;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
                 PlayerPrefs.SetFloat("WinsR", winL);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.1f);
                 awardedPoint = false;
             }
 
@@ -82,9 +82,9 @@ public class Score : MonoBehaviour
                 winR = PlayerPrefs.GetFloat("WinsL");
                 winR += 1;
                 awardedPoint = true;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
                 PlayerPrefs.SetFloat("WinsL", winR);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.1f);
                 awardedPoint = false;
             }
 
@@ -105,21 +105,21 @@ public class Score : MonoBehaviour
                 winL += 1;
                 awardedPoint = true;
                 PlayerPrefs.SetFloat("AiGamesPlayed", winL);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
 
                 winL = PlayerPrefs.GetFloat("AIWinsR");
                 winL += 1;
                 awardedPoint = true;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
                 PlayerPrefs.SetFloat("AIWinsR", winL);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.1f);
                 awardedPoint = false;
                 pongAgentR.EndRound();
                 SceneManager.LoadScene("Start Screen");
             }
             else
             {
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
                 SceneManager.LoadScene("Start Screen");
             }
         }
@@ -132,13 +132,13 @@ public class Score : MonoBehaviour
                 winL += 1;
                 awardedPoint = true;
                 PlayerPrefs.SetFloat("AiGamesPlayed", winL);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
 
                 winL = PlayerPrefs.GetFloat("AIWinsL");
                 winL += 1;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.1f);
                 PlayerPrefs.SetFloat("AIWinsL", winL);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.1f);
                 awardedPoint = false;
                 pongAgentR.EndRound();
                 SceneManager.LoadScene("Start Screen");

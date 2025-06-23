@@ -13,10 +13,10 @@ public class Collide : MonoBehaviour
     public float yRange1 = 550;
     public float yRange2 = 850;
 
-    public float xMaxRange;
-    public float xMinRange;
-    public float yMaxRange;
-    public float yMinRange;
+    public float xMaxRange = 11800;
+    public float xMinRange = 8450;
+    public float yMaxRange = 3550;
+    public float yMinRange = 5200;
 
     public Vector3 ballStart;
     public Vector2 ballVelocity;
@@ -47,6 +47,15 @@ public class Collide : MonoBehaviour
 
     public void Start()
     {
+        xMaxRange = 5900;
+        xMinRange = 4200;
+        yMaxRange = 2700; 
+        yMinRange = 2100;
+        yRange1 = -yMinRange /3;
+        yRange2 = -yMaxRange /3;
+        xRange1 = -xMinRange / 3;
+        xRange2 = -xMaxRange / 3;
+
         if (middleLine == null)
         {
             middleLine = GameObject.Find("Middel lijn");
@@ -317,8 +326,8 @@ public class Collide : MonoBehaviour
                     timer.gameObject.SetActive(false);
                 }
 
-                ballVelocity.x += ballSpeedx * Time.deltaTime;
-                ballVelocity.y += ballSpeedy * Time.deltaTime;
+                ballVelocity.x = ballSpeedx * Time.deltaTime;
+                ballVelocity.y = ballSpeedy * Time.deltaTime;
 
                 transform.localPosition = ballStart;
             }
@@ -343,6 +352,8 @@ public class Collide : MonoBehaviour
 
                 transform.localPosition = ballStart;
             }
+
+            StartCoroutine(CheckSpeed());
         }
 
         IEnumerator WaitAfterGoalR()
@@ -365,8 +376,8 @@ public class Collide : MonoBehaviour
                     timer.gameObject.SetActive(false);
                 }
 
-                ballVelocity.x += ballSpeedx;
-                ballVelocity.y += ballSpeedy;
+                ballVelocity.x = ballSpeedx;
+                ballVelocity.y = ballSpeedy;
 
                 transform.localPosition = ballStart;
             }
@@ -390,6 +401,18 @@ public class Collide : MonoBehaviour
                 ballVelocity.y += ballSpeedy;
 
                 transform.localPosition = ballStart;
+            }
+
+            StartCoroutine(CheckSpeed());
+        }
+
+        IEnumerator CheckSpeed()
+        {
+            yield return new WaitForSeconds(0.3f);
+            if (ballVelocity.x < 1000)
+            {
+                ballVelocity.x = ballSpeedx * 0.9f;
+                ballVelocity.y = ballSpeedy * 0.9f;
             }
         }
     }
